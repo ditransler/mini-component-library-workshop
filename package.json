@@ -41,6 +41,19 @@
     "@storybook/node-logger": "6.2.7",
     "@storybook/preset-create-react-app": "3.1.7",
     "@storybook/react": "6.2.7",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.2",
+    "prettier": "2.5.0",
     "webpack": "4.44.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,md}": [
+      "prettier --write"
+    ]
   }
 }
